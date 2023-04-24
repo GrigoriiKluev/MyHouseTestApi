@@ -5,23 +5,15 @@ from .models import Property, Entity
 
 
 
-class PropertySerializer(serializers.ModelSerializer):
-    property_list = serializers.SerializerMethodField()
+# class PropertySerializer(serializers.ModelSerializer):
+#     property_list = serializers.SerializerMethodField()
 
 
-    class Meta:
-        model = Property
-        fields = ('key', 'value')
+#     class Meta:
+#         model = Property
+#         fields = ('key', 'value')
 
-
-    # def to_representation(self, instance):
-    #     data = super().to_representation(instance=instance)
-    #     new_dict = {}
-    #     new_list = []
-    #     for value in data.values():
-    #         new_list.append(value)
-    #     new_dict[new_list[0]] = new_list[1]
-    #     return new_dict
+        
 
 
 class EntitySerializer(serializers.ModelSerializer):
