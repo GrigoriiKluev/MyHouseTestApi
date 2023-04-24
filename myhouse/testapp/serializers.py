@@ -20,7 +20,7 @@ class EntitySerializer(serializers.ModelSerializer):
 
     value = serializers.IntegerField()
     #properties = PropertySerializer(read_only=True, many=True)
-    properties = serializers.SerializerMethodField()
+    properties = serializers.SerializerMethodField(read_only=True)
 
     def get_properties(self, instance): # Метод поля который переопределяет вывод связанных моделей many_to_many
         correct_dict = {}
