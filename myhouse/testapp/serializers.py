@@ -43,17 +43,13 @@ class EntitySerializer(serializers.ModelSerializer):
        model = Entity
        fields = ('value', 'properties')
 
-   # def to_internal_value(self, data):
-   #    if 'data[value]' in data.keys():
-   #       data["value"] = data['data[value]']
-   #       data.pop('data[value]')
-   #    else:
-   #       pass
-   #    return data
+#     class Meta:
+#        model = Entity
+#        fields = ("data[value]", 'properties')
 
-
-   # def create(self, validated_data):
-   #    return Entity.objects.create(**validated_data)
+#        extra_kwargs = {
+#            "data[value]": {"source": "value"}
+#        }
 
 
 
